@@ -27,11 +27,6 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
-    command: >
-      bash -c "
-        postgres -c 'CREATE DATABASE redwooddb;'
-        postgres -c 'CREATE DATABASE redwooddbtest;'
-      "
 
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)

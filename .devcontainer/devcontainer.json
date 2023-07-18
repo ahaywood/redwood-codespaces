@@ -2,8 +2,9 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
 {
 	"name": "Node.js & PostgreSQL",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
+	"image": "mcr.microsoft.com/vscode/devcontainers/javascript-node-postgres:0-14",
+	// "dockerComposeFile": "docker-compose.yml",
+	//"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -12,7 +13,8 @@
 	"forwardPorts": [
 		8910,
 		8911,
-		5432
+		5432,
+		5555
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [

@@ -22,7 +22,16 @@ services:
     image: postgres:latest
     restart: unless-stopped
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - redwood_dev:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+  testdb:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - redwood_test:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
@@ -32,4 +41,5 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
 volumes:
-  postgres-data:
+  redwood_dev:
+  redwood_test:

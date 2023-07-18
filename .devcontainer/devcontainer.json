@@ -9,17 +9,9 @@
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or with the host.
-	"forwardPorts": [
-		8910,
-		8911,
-		5432,
-		5555
-	],
+	"forwardPorts": [ 8910, 8911, 5432, 5555 ],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": [
-		"yarn create redwood-app . --overwrite --yarn-install --typescript --git-init=false",
-		"yarn install"
-	],
+	"postCreateCommand": "yarn install",
 	"postStartCommand": "yarn rw dev",
 	// Configure tool-specific properties.
 	"customizations": {

@@ -11,8 +11,10 @@
 	// This can be used to network with other containers or with the host.
 	"forwardPorts": [ 8910, 8911, 5432, 5555 ],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn install",
-	"postStartCommand": "yarn rw dev",
+	"postCreateCommand": [
+		"yarn install",
+    "yarn rw dev"
+	],
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
